@@ -4,23 +4,22 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
+use App\Models\Brand;
+use App\Models\Category;
+use App\Models\Product;
+
 class Search extends Component
 {
-
-    public $count = 1;
- 
-    public function increment()
-    {
-        $this->count++;
-    }
- 
-    public function decrement()
-    {
-        $this->count--;
-    }
-
     public function render()
     {
-        return view('livewire.search');
+        $brands = Brand::get();
+        $categories = Category::get();
+        $products = Product::get();
+
+        return view('livewire.search')->with([
+            'brands' => $brands,
+            'products' => $products,
+            'categories' => $categories
+        ]);
     }
 }
