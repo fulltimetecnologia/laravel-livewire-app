@@ -7,29 +7,35 @@ Implementação de mecanismo de busca com filtros combinados utilizando LARAVEL 
 -   PHP 8.3
 -   Docker
 -   Docker compose
+-   Composer para instalar as dependências:
+
+    - https://getcomposer.org/download/
 
 ## Configurando seu ambiente
 
 - Este projeto faz uso da ferramenta Laravel Sail.
 
-- Ao baixar o projeto basta rodar o comandos:
+- Após clonar o projeto, execute os seguintes comandos:
 
-    - Instalar dependencias:
+    - Instalando dependências:
 
     ```
     composer install
     ```
 
-    - Rodar o comando para criar os containers:
+    - Criando containers com sail:
 
     ```
     ./vendor/bin/sail up -d
     ```
 
-    - Criar e popular tabelas do banco de dados
+    - Criando e populando tabelas do banco de dados:
+
     ```
     ./vendor/bin/sail php artisan migrate:fresh --seed
     ```
+
+    Obs: Somente se tiver problemas em criar as tabelas, mude o .env.exemple para .env (O mesmo já está com as configurações padrão do sail)
 
 ## Iniciando a aplicação
 
@@ -37,4 +43,4 @@ Implementação de mecanismo de busca com filtros combinados utilizando LARAVEL 
 ./vendor/bin/sail up
 ```
 
-Isso deverá iniciar o projeto usando Docker e você deverá ser capaz de navegar para a página inicial (http://localhost) usando um navegador qualquer.
+Isso deverá iniciar o projeto usando Docker (http://localhost).
