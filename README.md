@@ -1,3 +1,5 @@
+![Demo](docs/demo.gif)
+
 ## Sobre
 
 Implementação de mecanismo de busca com filtros combinados utilizando LARAVEL LIVEWIRE.
