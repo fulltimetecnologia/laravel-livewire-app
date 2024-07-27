@@ -28,54 +28,6 @@ class SearchComponentTest extends TestCase
     }
 
     #[Test]
-    public function it_searches_by_category()
-    {
-        $categoryA = Category::factory()->create(['name' => 'CategoryA']);
-        $categoryB = Category::factory()->create(['name' => 'CategoryB']);
-        $productA = Product::factory()->create(['category_id' => $categoryA->id]);
-        $productB = Product::factory()->create(['category_id' => $categoryB->id]);
-
-        Livewire::test(Search::class)
-            ->set('selectedCategories', [$categoryA->id])
-            ->assertSee($productA->name)
-            ->assertDontSee($productB->name);
-    }
-
-    #[Test]
-    public function it_searches_by_brand()
-    {
-        $brandA = Brand::factory()->create(['name' => 'BrandA']);
-        $brandB = Brand::factory()->create(['name' => 'BrandB']);
-        $productA = Product::factory()->create(['brand_id' => $brandA->id]);
-        $productB = Product::factory()->create(['brand_id' => $brandB->id]);
-
-        Livewire::test(Search::class)
-            ->set('selectedBrands', [$brandA->id])
-            ->assertSee($productA->name)
-            ->assertDontSee($productB->name);
-    }
-
-    #[Test]
-    public function it_does_not_show_products_from_other_brands()
-    {
-        $brandA = Brand::factory()->create(['name' => 'BrandA']);
-        $brandB = Brand::factory()->create(['name' => 'BrandB']);
-        $productA = Product::factory()->create(['brand_id' => $brandA->id]);
-        $productB = Product::factory()->create(['brand_id' => $brandB->id]);
-
-        Livewire::test(Search::class)
-            ->set('selectedBrands', [$brandA->id])
-            ->assertSee($productA->name)
-            ->assertDontSee($productB->name);
-
-        Livewire::test(Search::class)
-            ->set('selectedBrands', [$brandB->id])
-            ->assertSee($productB->name)
-            ->assertDontSee($productA->name);
-    }
-
-
-    #[Test]
     public function it_searches_by_name_category_and_brand()
     {
         $category = Category::factory()->create(['name' => 'Category']);

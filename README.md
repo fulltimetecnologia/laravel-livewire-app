@@ -58,3 +58,11 @@ Implementação de mecanismo de busca com filtros combinados utilizando LARAVEL 
     ```
 
     - Isso deverá iniciar o projeto usando Docker (http://localhost).
+
+    - PLUS
+
+        - Testes unitários:
+
+        ```
+        ./vendor/bin/sail php artisan test 
+        ```
