@@ -22,7 +22,7 @@ Implementação de mecanismo de busca com filtros combinados utilizando LARAVEL 
     ```
     cp .env.example .env
     ```
-    
+
     - Rodar o comando:
 
     ```
@@ -49,6 +49,12 @@ Implementação de mecanismo de busca com filtros combinados utilizando LARAVEL 
     - Instalando dependências:
     ```
     ./vendor/bin/sail npm install
+    ```
+
+    - Buildando as dependências
+
+    ```
+    ./vendor/bin/sail npm run build
     ```
 
     - Isso deverá iniciar o projeto usando Docker (http://localhost).
