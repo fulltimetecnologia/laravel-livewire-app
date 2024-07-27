@@ -37,4 +37,9 @@ Implementação de mecanismo de busca com filtros combinados utilizando LARAVEL 
     ./vendor/bin/sail artisan migrate:fresh --seed
     ```
 
+    - Instalando dependências:
+    ```
+    ./vendor/bin/sail npm install
+    ```
+
     - Isso deverá iniciar o projeto usando Docker (http://localhost).

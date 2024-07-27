@@ -25,8 +25,8 @@ class ProductFactory extends Factory
         return [
            'name' => $this->faker->word,
             'price' => $this->faker->randomFloat(2, 10, 1000),
-            'category_id' => Category::inRandomOrder()->first()->id,
-            'brand_id' => Brand::inRandomOrder()->first()->id,
+            'category_id' => Category::factory(),
+            'brand_id' => Brand::factory(),
             'created_at' => now(),
             'updated_at' => now(),
         ];
