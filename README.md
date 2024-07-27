@@ -12,8 +12,17 @@ Implementação de mecanismo de busca com filtros combinados utilizando LARAVEL 
 
 - Após clonar o projeto, execute os seguintes comandos:
 
-    - Capiar o arquivo .env.exemple para .env
+    - Entre na pasta do projeto:
 
+    ```
+    cd laravel-livewire-app
+    ```
+    - Copiar o arquivo .env.exemple para .env
+
+    ```
+    cp .env.example .env
+    ```
+    
     - Rodar o comando:
 
     ```
