@@ -9,7 +9,7 @@ use App\Models\Product;
 
 class Search extends Component
 {
-    public $searchTerm = '';
+    public $searchTerm = [];
     public $selectedCategories = [];
     public $selectedBrands = [];
 
@@ -19,11 +19,11 @@ class Search extends Component
         'selectedBrands' => ['except' => []]
     ];
 
-    public function mount()
+    public function mount(Request $request)
     {
-        $this->searchTerm = request()->query('searchTerm', $this->searchTerm);
-        $this->selectedCategories = request()->query('selectedCategories', $this->selectedCategories);
-        $this->selectedBrands = request()->query('selectedBrands', $this->selectedBrands);
+        $this->searchTerm = $request->query('searchTerm', $this->searchTerm);
+        $this->selectedCategories = $request->query('selectedCategories', $this->selectedCategories);
+        $this->selectedBrands = $request->query('selectedBrands', $this->selectedBrands);
     }
 
     public function updatedSearchTerm()

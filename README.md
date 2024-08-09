@@ -4,6 +4,9 @@
 
 Implementação de mecanismo de busca com filtros combinados utilizando LARAVEL LIVEWIRE.
 
+Laravel 11.
+Livewire 3.0.
+
 ## Requisitos do ambiente de desenvolvimento
 
 -   Docker
